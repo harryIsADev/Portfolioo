@@ -1,6 +1,6 @@
 /* Reset and base styles */
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 * {
     margin: 0;
@@ -90,6 +90,43 @@ nav ul li a:hover {
     color: #cccccc;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0; /* Align to the left */
+        right: 0; /* Full width */
+        background-color: #131e25; /* Match background color */
+        display: none; /* Hidden by default */
+    }
+
+    nav ul.open {
+        display: flex; /* Show links when open */
+    }
+
+    nav .menu-icon {
+        display: block; /* Show hamburger icon on small screens */
+        font-size: 24px; /* Size of the hamburger icon */
+        cursor: pointer; /* Pointer cursor for clickable icon */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Remove horizontal margin */
+        margin-top: 0.5rem; /* Add vertical spacing */
+        text-align: center; /* Center align text */
+    }
+    
+    nav h1 {
+        margin-bottom: 1rem; /* Add space below the heading */
+    }
+    
+    nav ul li a {
+        padding: 10px; /* Add padding for touch targets */
+    }
+}
+
 /* Hero section styles */
 .hero {
     height: 100vh;
@@ -125,7 +162,7 @@ nav ul li a:hover {
 
 /* Section styles */
 section {
-    padding: 4rem 2rem;
+    padding: 4rem;
 }
 
 section h2 {
@@ -162,114 +199,6 @@ section h2 {
 .skill-item span {
     font-size: 1rem;
 }
-
-/* Project Section Styles */
-.project-section {
-  padding: 40px 20px;
-  background-color: #111; /* Dark background to match the black theme */
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-
-}
-
-.tab-trigger {
-  padding: 10px 25px;
-  border: 1px solid #444;
-  background-color: #222;
-  color: #fff;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-.tab-trigger.active {
-  background-color:rgb(0, 0, 255);
-  color: #fff;
-}
-
-.tab-trigger:hover {
-  background-color: black;
-}
-
-.slider {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-.slide {
-  min-width: 100%;
-  transition: transform 0.5s ease;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.project-item {
-  padding: 20px;
-  background-color: #222;
-  border: 1px solid #444;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.project-item:hover {
-  transform: scale(1.05);
-  background-color: #333;
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-.project-details h4 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.project-details p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #ddd;
-}
-
-
-
-.coming-soon {
-  color: #bbb;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 20px;
-}
-
-
 
 /* Contact section styles */
 .contact-links {
@@ -321,10 +250,6 @@ footer {
     .skill-item span {
         font-size: 0.9rem;
     }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust for smaller screens */
-    }
 }
 
 /* Accessibility */
@@ -339,122 +264,23 @@ footer {
     white-space: nowrap;
     border-width: 0;
 }
-.resume-btn{
+
+.resume-btn {
     border: none;
     background-color: black;
     color: rgb(0, 0, 255);
     font-weight: 600;
 }
-.resume-btn:hover{
+
+.resume-btn:hover {
     cursor: pointer;
 }
 
 /* Glitch effect on Name */
-
-
-    .glitch {
-        font-size: 25px;
-        position: relative;
-        animation: glitch 1.5s linear infinite alternate-reverse;
-        color: white;
-    }
-
-    @keyframes glitch {
-        0% {
-            transform: none;
-        }
-        10% {
-            transform: translate(3px, -2px) skew(1deg, -1deg);
-        }
-        20% {
-            transform: translate(-3px, 2px) skew(-1deg, 1deg);
-        }
-        30% {
-            transform: translate(2px, 1px) skew(0.5deg, 0.5deg);
-        }
-        40% {
-            transform: translate(-2px, -1px) skew(-0.5deg, -0.5deg);
-        }
-        50% {
-            transform: none;
-        }
-        60% {
-            transform: translate(5px, -3px) skew(1deg, -1deg);
-        }
-        70% {
-            transform: translate(-5px, 3px) skew(-1deg, 1deg);
-        }
-        80% {
-            transform: translate(10px, 2px) skew(2deg, 1deg);
-        }
-        90% {
-            transform: translate(-10px, -2px) skew(-2deg, -1deg);
-        }
-        100% {
-            transform: none;
-        }
-    }
-
-    .glitch:before,
-    .glitch:after {
-        content: attr(data-text);
-        position: absolute;
-        left: 0;
-        width: 100%;
-        opacity: 0.8;
-    }
-
-    .glitch:before {
-        color: orange;
-        z-index: -1;
-        animation: glitchTop 2s linear infinite alternate-reverse;
-        clip-path: inset(0 0 50% 0);
-    }
-
-    @keyframes glitchTop {
-        0%, 100% {
-            transform: translate(0, 0);
-        }
-        10%, 30% {
-            transform: translate(5px, -2px);
-        }
-        20%, 50% {
-            transform: translate(-5px, 2px);
-        }
-        60% {
-            transform: translate(3px, 1px) skew(1deg);
-        }
-        80% {
-            transform: translate(-3px, -1px) skew(-1deg);
-        }
-    }
-
-    .glitch:after {
-        color: rgb(5, 187, 5);
-        z-index: -2;
-        animation: glitchBottom 2.5s linear infinite alternate-reverse; 
-        clip-path: inset(50% 0 0 0);
-    }
-
-    @keyframes glitchBottom {
-        0%, 100% {
-            transform: translate(0, 0);
-        }
-        20%, 40% {
-            transform: translate(-4px, 2px);
-        }
-        30%, 60% {
-            transform: translate(4px, -2px);
-        }
-        70% {
-            transform: translate(2px, -1px) skew(1deg);
-        }
-        90% {
-            transform: translate(-2px, 1px) skew(-1deg);
-        }
-    } 
-/* black box to cover initial transition state
-
-
-
-/* heading animation */
+.glow {
+    font-size: 30px; /* Adjust font size as needed */
+    position: relative;
+    color: white; /* Base text color */
+    animation: bounce 1.5s infinite alternate; /* Bounce animation */
+   
+}
