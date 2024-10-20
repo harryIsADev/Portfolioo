@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "AgroPredict",
-    year: "2022",
+    year: "2024",
     description:
       "AI-powered agricultural platform for crop prediction, disease detection, and farm management.",
     previewUrl: "#",
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: "Bookshop",
-    year: "2021",
+    year: "2024",
     description:
       "An online bookstore application with inventory management and recommendation system.",
     previewUrl: "#",
