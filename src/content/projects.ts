@@ -8,32 +8,25 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Canine Assistants",
-    description: "Web database to track service dog behavior and medical concerns.",
-    tags: ["Next.js", "MongoDB", "Azure"],
-    liveLink: "https://canine-assistants.netlify.app",
-    devLink: "https://github.com/GTBitsOfGood/canine-assistants",
+    title: "ApplySmart",
+    description: "ATS based platform which analysis resume and automate job form filling",
+    tags: ["Next.js", "MongoDB", "Aws","NodeJs","FireBase","Prisma"],
+    liveLink: "apply-smart-kappa.vercel.app",
+    devLink: "https://github.com/Suuraw/ApplySmart",
   },
   {
-    title: "Peer Notes",
-    description: "P2P note sharing platform that allows students to host and search for notes based on professor, course, semester and topic.",
-    tags: ["Django", "Flask", "React.js", "SQLite"],
-    liveLink: "",
-    devLink: "https://github.com/AmanTahiliani/PeerNotes",
+    title: "E-Cell Cohort",
+    description: "A Learning website for new E-cell members",
+    tags: ["React", "NodeJs", "MongoDb", "Excel Sheet API"],
+    liveLink: "https://ecohort.vercel.app/",
+    devLink: "https://github.com/Suuraw/E-cell-Cohort",
   },
   {
-    title: "Web Crawler",
-    description: "Domain-specific web crawler written in Go with MongoDB as a web archive. Parses pages for keywords and creates an inverted index table for search queries.",
-    tags: ["Go", "MongoDB"],
-    liveLink: "",
-    devLink: "https://github.com/afazio1/web-crawler",
-  },
-  {
-    title: "Obsidian Plugin: Markdown Blogger",
-    description: "A text editor plugin empowering developers to effortlessly publish markdown notes to their static sites.",
-    tags: ["TypeScript", "Node.js"],
-    liveLink: "https://obsidian.md/plugins?search=markdown%20blogger",
-    devLink: "https://github.com/afazio1/obsidian-markdown-blogger"
+    title: "Todo Agent",
+    description: "Agent that helps manage tasks within team just via prompt",
+    tags: ["GCP", "MongoDB","NodeJs","React+Vite"],
+    liveLink: "https://todoagent.vercel.app/",
+    devLink: "https://github.com/Suuraw/ToDo-Agent-Frontend",
   }
 ]
 

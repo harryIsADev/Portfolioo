@@ -1,4 +1,4 @@
-import { Github, Linkedin, Youtube } from "lucide-react"
+import { Github, Linkedin,Pickaxe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Projects from "@/components/sections/Projects"
@@ -17,9 +17,9 @@ export default function Home() {
       icon: <Linkedin className="w-4 h-4"/>
     },
     {
-      title: "YouTube",
-      href: "https://youtube.com/c/RoboticNation",
-      icon: <Youtube className="w-4 h-4"/>
+      title: "LeetCode",
+      href: "https://leetcode.com/u/sujayraw13/",
+      icon: <Pickaxe className="w-4 h-4"/>
     }
   ]
 
@@ -27,7 +27,7 @@ export default function Home() {
     <div className="space-y-6">
       <h1 className="text-purple-blue text-2xl md:text-3xl">Hello, World! 👋</h1>
       <p className="text-lg text-gray-white">
-        Web and systems enthusiast
+        Web and Devops enthusiast
       </p>
       <div className="flex gap-4 flex-wrap">
         {socials.map((social) => (
