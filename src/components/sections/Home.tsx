@@ -8,12 +8,12 @@ export default function Home() {
   const socials = [
     {
       title: "GitHub",
-      href: "https://github.com/afazio1",
+      href: "https://github.com/Suuraw",
       icon: <Github className="w-4 h-4" />
     },
     {
       title: "LinkedIn",
-      href: "https://www.linkedin.com/in/alexa-fazio/",
+      href: "https://www.linkedin.com/in/sujay-kumar-4b85b5252/",
       icon: <Linkedin className="w-4 h-4"/>
     },
     {
